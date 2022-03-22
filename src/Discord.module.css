@@ -1,0 +1,256 @@
+@import url("http://fonts.cdnfonts.com/css/miratrix");
+:root {
+  --title-font-color: #888ff3;
+  --main-bg-color: #1f2029;
+  --scrollbar-track-bg-color: #181920;
+  --scrollbar-thumb-fg-color: #7289da;
+  --main-font-color: #0d9489;
+  --main-border-unselect-color: rgb(10, 118, 107);
+  --main-border-select-color: rgb(13, 148, 137);
+}
+
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1f2029;
+}
+
+.Header {
+  height: 80px;
+  margin-bottom: 50px;
+  background-color: #17181f;
+}
+
+.LogoWrapper {
+  width: 300px;
+  height: 80px;
+  position: relative;
+  background: #121218;
+}
+
+.LogoWrapper::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 40px solid #121218;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+
+.Logo {
+  margin: 0;
+  text-align: center;
+  color: var(--title-font-color);
+  font-size: 4em;
+  line-height: 80px;
+}
+
+.ListWrapper {
+  margin: 0 32px;
+  overflow-y: scroll;
+}
+
+.ListWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ListWrapper::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--scrollbar-track-bg-color);
+}
+
+.ListWrapper::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--scrollbar-thumb-fg-color);
+}
+
+.ServerList .Row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ServerItem {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ServerItem:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.ServerItem .Panel {
+  height: 164px;
+  margin: 8px 0;
+  background-color: #181920;
+}
+
+.ServerItem .ServerItemContentWrapper {
+  width: 490px;
+  border-top: 1px solid #7289da;
+  border-left: 1px solid #7289da;
+  border-bottom: 1px solid #7289da;
+  border-radius: 8px 0 0 8px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper .ServerItemAvatar {
+  border-radius: 100px;
+  border: 3px solid transparent;
+  height: 100px;
+  margin: 16px 16px 4px 16px;
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper .OnlineCounterContainer {
+  margin: 4px 16px 16px 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper .OnlineCounterContainer .Pulse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 34, 0.7);
+          box-shadow: 0 0 0 0 rgba(0, 255, 34, 0.7);
+  border-radius: 25px;
+  background-color: rgba(0, 255, 34, 0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper .OnlineCounterContainer .Pulse:hover {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+            box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+            box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+  }
+}
+
+.ServerItem .ServerItemContentWrapper .AvatarAndOnlineWrapper .OnlineCounterContainer .Counter {
+  margin: 0;
+  color: white;
+  padding-left: 5px;
+}
+
+.ServerItem .ServerItemContentWrapper .NameAndAboutWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ServerItem .ServerItemContentWrapper .NameAndAboutWrapper .ServerItemName {
+  margin: 32px 16px 0 0;
+  height: 60px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ServerItem .ServerItemContentWrapper .NameAndAboutWrapper .ServerItemAbout {
+  height: 100px;
+  margin: 0 16px 0 0;
+  font-size: 14px;
+  color: #b8b8b8;
+}
+
+.ServerItem .ServerItemBtnWrapper {
+  width: 60px;
+  margin: 8px 0;
+  border: 1px solid #7289da;
+  border-radius: 0 8px 8px 0;
+}
+
+.ServerItem .ServerItemBtnWrapper .ServerItemBtn {
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  padding: 7px;
+  background-color: #7289da;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ServerItem .ServerItemBtnWrapper .ServerItemBtn:hover {
+  background-color: #475485;
+}
+
+.ServerItem .ServerItemBtnWrapper .ServerItemBtn::before {
+  font-family: FontAwesome;
+  content: "\f101";
+  display: inline-block;
+  font-size: 3em;
+  vertical-align: middle;
+}
+
+.ServerItem-Visible {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ServerItem-UnVisible {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=Discord.module.css.map */
