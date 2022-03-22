@@ -1,3 +1,4 @@
+import Icon, { PlusCircleFilled } from '@ant-design/icons'
 import { createRef, useEffect, useState } from 'react'
 import s from './Discord.module.css'
 import { useContainerDimensions } from './hooks/useContainerDimensions'
@@ -16,8 +17,17 @@ function Discord() {
 
   return <div>
     <header className={s.Header}>
-      <div className={s.LogoWrapper}>
-        <h1 className={s.Logo}>RCFF</h1>
+      <div className={s.LogoAndNavBarWrapper}>
+        <div className={s.LogoWrapper}>
+          <h1 className={s.Logo}>RCFF</h1>
+        </div>
+        <div className={s.NavBarWrapper}>
+          <div className={s.DiscordBtn}>Discord</div>
+          <div className={s.YoutubeBtn}>YouTube</div>
+        </div>
+      </div>
+      <div className={s.SpecialButtonWrapper}>
+        <p className={s.SpecialButton}>добавить</p>
       </div>
     </header>
     <div style={{ height: document.body.offsetHeight - 150 + 'px' }} className={s.ListWrapper} ref={ServerListWrapperRef}>
@@ -85,7 +95,7 @@ function ServerItem(props: ServerItemProps) {
       <div className={s.AvatarAndOnlineWrapper}>
         <img className={s.ServerItemAvatar} src="https://cdn.discordapp.com/attachments/915352648448897034/955865729138315305/57518400d12b7771.png"></img>
         <div className={s.OnlineCounterContainer}>
-        <div className={s.Pulse}></div>
+          <div className={s.Pulse}></div>
           <p className={s.Counter}>7893</p>
         </div>
       </div>
