@@ -1,5 +1,5 @@
-import Icon, { PlusCircleFilled } from '@ant-design/icons'
 import { createRef, useEffect, useState } from 'react'
+import { getDiscordServerList, Guild } from './api/getDiscordServerList'
 import s from './Discord.module.css'
 import { useContainerDimensions } from './hooks/useContainerDimensions'
 
@@ -10,10 +10,7 @@ function Discord() {
 
   // Temporary data
   // make download from server
-  let array = []
-  for (let i = 0; i < 30; i++) {
-    array.push("[YWS] Культ личности Ларки, топ")
-  }
+  let DiscordServerList: Guild[] = getDiscordServerList('')
 
   return <div>
     <header className={s.Header}>
@@ -31,14 +28,14 @@ function Discord() {
       </div>
     </header>
     <div style={{ height: document.body.offsetHeight - 150 + 'px' }} className={s.ListWrapper} ref={ServerListWrapperRef}>
-      <ServerList data={array} parent={ServerListWrapperRef} parentMargin={64} />
+      <ServerList data={DiscordServerList} parent={ServerListWrapperRef} parentMargin={64} />
     </div>
   </div >
 }
 
 
 
-interface ServerListProps { data: string[], parent: any, parentMargin: number }
+interface ServerListProps { data: Guild[], parent: any, parentMargin: number }
 
 function ServerList(props: ServerListProps) {
   const rowWidth = 558
@@ -56,13 +53,13 @@ function ServerList(props: ServerListProps) {
     gridTemplateColumns: `repeat(${col}, 1fr)`
   }} className={s.ServerList}>
     {
-      array.map((list: string[], col: any) => <div key={col} className={s.Row} style={{
+      array.map((list: Guild[], col: any) => <div key={col} className={s.Row} style={{
         display: 'grid',
         gridTemplateRows: `repeat(${array[0].length}, 1fr)`,
       }}>
         {
-          list.map((element: string, row: any) =>
-            <ServerItem key={row} title={element} ms={150 * col + 150 * row} />
+          list.map((server: Guild, row: any) =>
+            <ServerItem key={row} title={server.name} ms={150 * col + 150 * row} />
           )
         }
       </div>)
@@ -76,11 +73,9 @@ interface ServerItemProps { title: string, avatar?: string, members?: number, on
 
 function ServerItem(props: ServerItemProps) {
   const [isAnimate, setAnimate] = useState(false)
-  const [isHover, setHover] = useState(false)
   const ServerItemRef: any = createRef()
 
   const AnimateStyles = () => isAnimate === true ? s["ServerItem-Visible"] : s['ServerItem-UnVisible']
-  const WrappersStyle = (wrapperStyle: any) => `${s.Panel} ${wrapperStyle}`
 
   useEffect(() => {
     if (isAnimate === false) {
@@ -105,10 +100,7 @@ function ServerItem(props: ServerItemProps) {
       </div>
     </div>
     <div className={`${s.Panel} ${s.ServerItemBtnWrapper}`}>
-      <button className={s.ServerItemBtn}
-        onMouseEnter={() => { setHover(true) }}
-        onMouseLeave={() => { setHover(false) }}>
-      </button>
+      <button className={s.ServerItemBtn}></button>
     </div>
   </div>
 }
