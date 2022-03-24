@@ -1,5 +1,6 @@
 import { createRef, useEffect, useState } from 'react'
 import { getDiscordServerList, Guild } from './api/getDiscordServerList'
+import Button from './components/Button/Button'
 import s from './Discord.module.css'
 import { useContainerDimensions } from './hooks/useContainerDimensions'
 
@@ -19,8 +20,9 @@ function Discord() {
           <h1 className={s.Logo}>RCFF</h1>
         </div>
         <div className={s.NavBarWrapper}>
-          <div className={s.DiscordBtn}>Discord</div>
-          <div className={s.YoutubeBtn}>YouTube</div>
+          <Button type='button' text='Small button' size='small'/>
+          <Button type='button' text='Medium button' />
+          <Button type='button' text='Large button' size='large' />
         </div>
       </div>
       <div className={s.SpecialButtonWrapper}>

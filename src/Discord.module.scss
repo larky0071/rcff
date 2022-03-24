@@ -63,15 +63,9 @@ body {
         .NavBarWrapper {
             margin-left: 200px;
             display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
 
-            .DiscordBtn {
-                color: blue;
-                margin-right: 100px;
-            }
-
-            .YoutubeBtn {
-                color: red;
-            }
         }
     }
 
