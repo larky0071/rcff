@@ -1,6 +1,6 @@
 import { createRef, useEffect, useState } from 'react'
 import { getDiscordServerList, Guild } from './api/getDiscordServerList'
-import { Button } from './components/button/Button'
+import { Button } from './UI/button/Button'
 import s from './Discord.module.css'
 import { useContainerDimensions } from './hooks/useContainerDimensions'
 
@@ -53,7 +53,7 @@ function Discord() {
 interface ServerListProps { data: Guild[], parent: any, parentMargin: number }
 
 function ServerList(props: ServerListProps) {
-  const rowWidth = 558
+  const rowWidth = 562
   const { width } = useContainerDimensions(props.parent)
   const col = Number(String((width - props.parentMargin) / rowWidth)[0])
   const row = Math.ceil(props.data.length / col)
