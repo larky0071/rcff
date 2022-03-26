@@ -1,6 +1,6 @@
 import { createRef, useEffect, useState } from 'react'
 import { getDiscordServerList, Guild } from './api/getDiscordServerList'
-import Button from './components/Button/Button'
+import { Button } from './components/button/Button'
 import s from './Discord.module.css'
 import { useContainerDimensions } from './hooks/useContainerDimensions'
 
@@ -20,16 +20,29 @@ function Discord() {
           <h1 className={s.Logo}>RCFF</h1>
         </div>
         <div className={s.NavBarWrapper}>
-          <Button type='button' text='Small button' size='small'/>
-          <Button type='button' text='Medium button' />
-          <Button type='button' text='Large button' size='large' />
+          <Button size='large' type='primary'>Discord сервера</Button>
+          <Button size='large' type='primary'>YouTube каналы</Button>
+          {/* <button>Discord сервера</button>
+          <button>YouTube каналы</button> */}
         </div>
       </div>
       <div className={s.SpecialButtonWrapper}>
-        <p className={s.SpecialButton}>добавить</p>
+        <Button size='large' type='submit'>Добавить</Button>
+        {/* <button>Добавить</button> */}
       </div>
     </header>
-    <div style={{ height: document.body.offsetHeight - 150 + 'px' }} className={s.ListWrapper} ref={ServerListWrapperRef}>
+    <div className={s.InfoPanel}>
+      <div className={s.InfoWrapper}>
+        <h2>Список фурри дискорд серверов</h2>
+        <p>Описание Говно, Залупа, Пенис. Хер, Давалка </p>
+        <p>Описание Говно, Залупа, Пенис, Хер, Давалка neros2k ok? ok??? YEAH!!!</p>
+      </div>
+      <div className={s.StatWrapper}>
+        <p><span>1167</span> - Серверов</p>
+        <p><span>15367</span> - Участников</p>
+      </div>
+    </div>
+    <div style={{ height: document.body.offsetHeight - 150 + 380 + 'px' }} className={s.ListWrapper} ref={ServerListWrapperRef}>
       <ServerList data={DiscordServerList} parent={ServerListWrapperRef} parentMargin={64} />
     </div>
   </div >

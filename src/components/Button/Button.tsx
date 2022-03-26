@@ -1,41 +1,26 @@
 import s from './Button.module.css'
 
 interface ButtonProps {
-    type?: "button" | "submit"
-    text?: string
-    disabled?: boolean
-    size?: "small" | "medium" | "large"
-    color?: string
+    type?: "default" | "primary" | "submit"
+    size?: "small" | "normal" | "large"
+    children: React.ReactNode
 }
 
-function Button(props: ButtonProps) {
+export function Button({ type, size, children }: ButtonProps) {
 
-    const swithStyleSize = () => {
-        switch (props.size) {
-            case "small":
-                return s.Small
-
-            case "medium":
-                return s.Medium
-
-            case "large":
-                return s.Large
-
-            default:
-                return s.Medium
-        }
+    const typeStyle = () => {
+        if (!type || type === "default") return s.default
+        if (type === "primary") return s.primary
+        if (type === "submit") return s.submit
     }
 
-    const swithStyleActivity = () => !props.disabled ? s.Disabled : s.Enabled
+    const sizeStyle = () => {
+        if (!size || size === "normal") return s.normal
+        if (size === "small") return s.small
+        if (size === "large") return s.large
+    }
 
-    return (
-        <div
-            style={!props.disabled ? {color: '#878992'} : props.color ? { color: props.color } : { color: 'white' }}
-            className={`${s.Button} ${swithStyleSize()} ${swithStyleActivity()}`
-            }>
-            {props.text}
-        </div>
-    )
+    return <button className={`${typeStyle()} ${sizeStyle()}`}>
+        {children}
+    </button>
 }
-
-export default Button

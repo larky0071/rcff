@@ -20,7 +20,6 @@ body {
 .Header {
   height: 80px;
   width: 100vw;
-  margin-bottom: 50px;
   background-color: #17181f;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -73,23 +72,26 @@ body {
 }
 
 .Header .LogoAndNavBarWrapper .NavBarWrapper {
-  margin-left: 200px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-left: 50px;
+}
+
+.Header .LogoAndNavBarWrapper .NavBarWrapper button {
+  margin: 0 16px;
 }
 
 .Header .SpecialButtonWrapper {
-  height: 40px;
   position: relative;
   right: 50px;
-  background: #333344;
+}
+
+.InfoPanel {
+  width: 100%;
+  background: #121218;
+  color: white;
+  height: 300px;
+  margin: 30px 0;
+  border-top: 10px solid #17181f;
+  border-bottom: 10px solid #17181f;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -99,41 +101,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
 }
 
-.Header .SpecialButtonWrapper::before {
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid #333344;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+.InfoPanel .InfoWrapper {
+  margin: 0 0 0 32px;
 }
 
-.Header .SpecialButtonWrapper::after {
-  content: "";
-  position: absolute;
-  left: -20px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 20px solid #333344;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+.InfoPanel .InfoWrapper h2 {
+  font-size: 4em;
+  margin: 0 0 40x 0;
 }
 
-.Header .SpecialButtonWrapper .SpecialButton {
-  padding: 0 15px;
+.InfoPanel .InfoWrapper p {
+  font-size: 1.5em;
   margin: 0;
-  text-align: center;
-  color: #3b49c2;
+}
+
+.InfoPanel .StatWrapper {
+  margin: 0 32px 0 0;
+}
+
+.InfoPanel .StatWrapper p {
   font-size: 2em;
-  line-height: 40px;
-  font-weight: bold;
+}
+
+.InfoPanel .StatWrapper span {
+  color: #10ca7c;
 }
 
 .ListWrapper {
@@ -172,11 +165,6 @@ body {
   transition: 0.3s;
 }
 
-.ListWrapper .ServerList .Row .ServerItem:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 .ListWrapper .ServerList .Row .ServerItem .Panel {
   height: 164px;
   margin: 8px 0;
@@ -185,9 +173,9 @@ body {
 
 .ListWrapper .ServerList .Row .ServerItem .ServerItemContentWrapper {
   width: 490px;
-  border-top: 1px solid #7289da;
-  border-left: 1px solid #7289da;
-  border-bottom: 1px solid #7289da;
+  border-top: 3px solid #7289da;
+  border-left: 3px solid #7289da;
+  border-bottom: 3px solid #7289da;
   border-radius: 8px 0 0 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -294,7 +282,7 @@ body {
 .ListWrapper .ServerList .Row .ServerItem .ServerItemBtnWrapper {
   width: 60px;
   margin: 8px 0;
-  border: 1px solid #7289da;
+  border: 3px solid #7289da;
   border-radius: 0 8px 8px 0;
 }
 

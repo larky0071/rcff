@@ -1,47 +1,50 @@
-.Button {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  margin: 0 8px;
-  border: 4px solid transparent;
+.default {
+  color: white;
+  background-color: transparent;
+  border: none;
   border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
-.Small {
-  font-size: 1em;
-  padding: 0 8px;
+.default:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #cfcfcf;
 }
 
-.Medium {
-  font-size: 1.5em;
-  padding: 0 16px;
-}
-
-.Large {
-  font-size: 2em;
-  padding: 0px 24px;
-}
-
-.Enabled {
-  cursor: pointer;
+.primary {
+  color: white;
   background-color: #7289da;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
-.Enabled:hover {
-  background-color: #4a598d;
+.primary:hover {
+  background-color: #475485;
 }
 
-.Disabled {
-  cursor: auto;
-  background-color: #4a598d;
+.submit {
+  color: white;
+  background-color: #10ca7c;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
-.Disabled:hover {
-  background-color: #4a598d;
+.submit:hover {
+  background-color: #0caa68;
+}
+
+.small {
+  padding: 4px 16px;
+  font-size: 1em;
+}
+
+.normal {
+  padding: 8px 16px;
+  font-size: 1em;
+}
+
+.large {
+  padding: 8px 32px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 /*# sourceMappingURL=Button.module.css.map */
