@@ -8,12 +8,12 @@ function Header() {
                 <h1 className={s.Logo}>RCFF</h1>
             </div>
             <div className={s.NavBarWrapper}>
-                <Button size='large' type='primary'>Discord сервера</Button>
-                <Button disable size='large' type='primary'>YouTube каналы</Button>
+                <Button disable={false} size='large' type='primary'>Discord сервера</Button>
+                <Button disable={true} size='large' type='primary'>YouTube каналы</Button>
             </div>
         </div>
         <div className={s.SpecialButtonWrapper}>
-            <Button size='large' type='submit'>Добавить</Button>
+            <Button disable={false} size='large' type='submit'>Добавить</Button>
         </div>
     </header>
 }
