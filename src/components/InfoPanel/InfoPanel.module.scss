@@ -1,0 +1,44 @@
+.InfoPanel {
+    width: 100%;
+    background: #121218;
+    color: white;
+    margin: 30px 0;
+    border-top: 10px solid #17181f;
+    border-bottom: 10px solid #17181f;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    .InfoWrapper {
+        text-align: center;
+        margin: 16px 16px 0 16px;
+        h2 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            margin: 0;
+            font-size: 1.5em;
+        }
+    }
+
+    .StatWrapper {
+        margin: 16px;
+        p {
+            font-size: 1.5em;
+        }
+        span {
+            color: #10ca7c;
+        }
+    }
+
+    .sp {
+        position: relative;
+        width: 60%;
+        left: 20%;
+        margin: 32px 0;
+        border-bottom: 1px solid white;
+    }
+}

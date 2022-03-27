@@ -33,7 +33,7 @@
 }
 
 .small {
-  padding: 4px 16px;
+  padding: 0 16px;
   font-size: 1em;
 }
 
@@ -46,5 +46,14 @@
   padding: 8px 32px;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+.enable {
+  cursor: pointer;
+}
+
+.disable {
+  cursor: not-allowed;
+  background-color: #475485;
 }
 /*# sourceMappingURL=Button.module.css.map */

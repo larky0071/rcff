@@ -3,10 +3,11 @@ import s from './Button.module.css'
 interface ButtonProps {
     type?: "default" | "primary" | "submit"
     size?: "small" | "normal" | "large"
-    children: React.ReactNode
+    disable?: boolean
+    children?: React.ReactNode
 }
 
-export function Button({ type, size, children }: ButtonProps) {
+export function Button({ type, size, disable, children }: ButtonProps) {
 
     const typeStyle = () => {
         if (!type || type === "default") return s.default
@@ -20,7 +21,12 @@ export function Button({ type, size, children }: ButtonProps) {
         if (size === "large") return s.large
     }
 
-    return <button className={`${typeStyle()} ${sizeStyle()}`}>
+    const ActivityStyle = () => {
+        if (disable === false) return s.enable
+        if (disable === true) return s.disable
+    }
+
+    return <button className={`${typeStyle()} ${sizeStyle()} ${ActivityStyle()}`}>
         {children}
     </button>
 }

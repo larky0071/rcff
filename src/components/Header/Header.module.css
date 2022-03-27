@@ -1,0 +1,67 @@
+.Header {
+  height: 80px;
+  width: 100vw;
+  background-color: #17181f;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .LogoAndNavBarWrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .LogoAndNavBarWrapper .LogoWrapper {
+  width: 300px;
+  height: 80px;
+  position: relative;
+  background: #121218;
+}
+
+.Header .LogoAndNavBarWrapper .LogoWrapper::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 40px solid #121218;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+
+.Header .LogoAndNavBarWrapper .LogoWrapper .Logo {
+  margin: 0;
+  text-align: center;
+  color: var(--title-font-color);
+  font-size: 4em;
+  line-height: 80px;
+}
+
+.Header .LogoAndNavBarWrapper .NavBarWrapper {
+  margin-left: 50px;
+}
+
+.Header .LogoAndNavBarWrapper .NavBarWrapper button {
+  margin: 0 16px;
+}
+
+.Header .SpecialButtonWrapper {
+  position: relative;
+  right: 50px;
+}
+/*# sourceMappingURL=Header.module.css.map */

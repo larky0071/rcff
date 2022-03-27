@@ -1,0 +1,186 @@
+.ServerItemWrapper {
+  margin: 16px 16px;
+}
+
+.ServerItemWrapper .ServerItem {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ServerItemWrapper .ServerItem .Content {
+  width: 500px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 1px solid #7289da;
+  border-radius: 8px 0 0 8px;
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper .Avatar {
+  border-radius: 100px;
+  border: 3px solid transparent;
+  height: 100px;
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper .OnlineWrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper .OnlineWrapper .Pulse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 34, 0.7);
+          box-shadow: 0 0 0 0 rgba(0, 255, 34, 0.7);
+  border-radius: 25px;
+  background-color: rgba(0, 255, 34, 0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper .OnlineWrapper .Pulse:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+            box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+            box-shadow: 0 0 0 7px rgba(232, 76, 61, 0);
+  }
+}
+
+.ServerItemWrapper .ServerItem .Content .LeftPanelWrapper .OnlineWrapper .Counter {
+  margin: 0;
+  font-size: 1em;
+  color: white;
+  padding-left: 5px;
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper {
+  margin-left: 16px;
+  margin-right: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper .Title {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  color: white;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper .About {
+  color: #c2c2c2;
+  max-width: 350px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper .About::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper .About::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--scrollbar-track-bg-color);
+}
+
+.ServerItemWrapper .ServerItem .Content .BodyWrapper .About::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--scrollbar-thumb-fg-color);
+}
+
+.ServerItemWrapper .ServerItem .Button {
+  border-top: 1px solid #7289da;
+  border-right: 1px solid #7289da;
+  border-bottom: 1px solid #7289da;
+  border-radius: 0 8px 8px 0;
+  width: 60px;
+}
+
+.ServerItemWrapper .ServerItem .Button button {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  background-color: #7289da;
+  color: #fff;
+  border: 1px solid #7289da;
+  border-radius: 0 5px 5px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ServerItemWrapper .ServerItem .Button button:hover {
+  background-color: #475485;
+}
+
+.ServerItemWrapper .ServerItem .Button button::before {
+  font-family: FontAwesome;
+  content: "\f0c5";
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.ServerItem-Visible {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.ServerItem-UnVisible {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=ServerItem.module.css.map */

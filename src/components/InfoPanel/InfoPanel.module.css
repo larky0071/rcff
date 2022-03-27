@@ -1,0 +1,58 @@
+.InfoPanel {
+  width: 100%;
+  background: #121218;
+  color: white;
+  margin: 30px 0;
+  border-top: 10px solid #17181f;
+  border-bottom: 10px solid #17181f;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.InfoPanel .InfoWrapper {
+  text-align: center;
+  margin: 16px 16px 0 16px;
+}
+
+.InfoPanel .InfoWrapper h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.InfoPanel .InfoWrapper p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.InfoPanel .StatWrapper {
+  margin: 16px;
+}
+
+.InfoPanel .StatWrapper p {
+  font-size: 1.5em;
+}
+
+.InfoPanel .StatWrapper span {
+  color: #10ca7c;
+}
+
+.InfoPanel .sp {
+  position: relative;
+  width: 60%;
+  left: 20%;
+  margin: 32px 0;
+  border-bottom: 1px solid white;
+}
+/*# sourceMappingURL=InfoPanel.module.css.map */
