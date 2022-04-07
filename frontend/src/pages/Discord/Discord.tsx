@@ -1,12 +1,12 @@
 import { createRef, useEffect, useState } from 'react'
-import { getDiscordServerList, Guild } from './api/getDiscordServerList'
-import { Button } from './UI/button/Button'
+import { getDiscordServerList, Guild } from '../../api/getDiscordServerList'
+import { Button } from '../../UI/button/Button'
 import s from './Discord.module.css'
-import { useContainerDimensions } from './hooks/useContainerDimensions'
-import ServerList from './components/ServerList/ServerList'
-import ServerItem from './components/ServerItem/ServerItem'
-import Header from './components/Header/Header'
-import InfoPanel from './components/InfoPanel/InfoPanel'
+import { useContainerDimensions } from '../../hooks/useContainerDimensions'
+import ServerList from '../../components/ServerList/ServerList'
+import ServerItem from '../../components/ServerItem/ServerItem'
+import Header from '../../components/Header/Header'
+import InfoPanel from '../../components/InfoPanel/InfoPanel'
 
 
 

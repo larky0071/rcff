@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from '../../UI/button/Button'
 import s from './Header.module.css'
 
@@ -13,7 +14,7 @@ function Header() {
             </div>
         </div>
         <div className={s.SpecialButtonWrapper}>
-            <Button disable={false} size='large' type='submit'>Добавить</Button>
+            <Link to="/add"><Button disable={false} size='large' type='submit'>Добавить</Button></Link>
         </div>
     </header>
 }

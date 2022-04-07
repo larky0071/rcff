@@ -1,0 +1,58 @@
+.Page {
+  background-color: #121218;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Page .PageContentWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.Page .PageContentWrapper .Header {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Page .PageContentWrapper .Header .Title {
+  margin: 0;
+  color: white;
+}
+
+.Page .PageContentWrapper .Header .SubTitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Page .PageContentWrapper .Content {
+  width: 600px;
+  text-align: center;
+  background-color: #1f2029;
+  border-radius: 4px;
+}
+
+.Page .PageContentWrapper .Content .Tab {
+  color: white;
+}
+
+.Page .PageContentWrapper .Content .Discord {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 15px;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+}
+
+.Page .PageContentWrapper .Content .Discord .Row {
+  width: 100%;
+}
+
+.Page .PageContentWrapper .Content .Discord .Button {
+  width: 200p;
+}
+/*# sourceMappingURL=Add.module.css.map */
