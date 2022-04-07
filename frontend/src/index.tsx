@@ -8,7 +8,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path='*' element={<h1>404</h1>} />
-      <Route path='/discord' element={<Discord />} />
+      <Route path='/' element={<Discord />} />
       <Route path='/add' element={<Add />} />
     </Routes>
   </BrowserRouter>,
