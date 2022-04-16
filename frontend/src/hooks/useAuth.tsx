@@ -1,18 +1,16 @@
-import { ok } from "assert"
-import fetch from "node-fetch"
 import { useState } from "react"
 
-export const useAuth = (props: any): [token: string | null, authorization: (ogin: string | null, password: string | null) => void] => {
+export const useAuth = (url: string): [token: string | null, authorization: (login: string | null, password: string | null) => void] => {
 
     const [JWT, setJWT] = useState('')
 
     const Authorization = async (login: string | null, password: string | null) => {
 
-        if (!props.url) return
+        if (!url) return
 
-        console.log('trying to send POST request to', props.url) // ! delete this before git push after testing
+        console.log('trying to send POST request to', url) // ! delete this before git push after testing
 
-        fetch(`${props.url}?login=${login}&password=${password}`)
+        fetch(`${url}?login=${login}&password=${password}`)
             .then(async response => {
                 const data: any = await response.json()
 
