@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,GAAG;EACV,IAAI,EAAE,EAAE;EACR,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,WAAW;EACpB,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAC1B",
+    "sources": [
+        "ServerList.module.scss"
+    ],
+    "names": [],
+    "file": "ServerList.module.css"
+}

@@ -10,13 +10,12 @@
     --main-border-select-color: rgb(13, 148, 137);
 }
 
-body {
+.Page {
     margin: 0;
-    //font-family: "Roboto", sans-serif;
-    font-family: "Oswald", sans-serif;
+    background-color: #1f2029;
     height: 100vh;
     width: 100vw;
-    background-color: #1f2029;
+    font-family: "Oswald", sans-serif;
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
@@ -31,6 +30,5 @@ body {
     &::-webkit-scrollbar-thumb {
         border-radius: 8px;
         background-color: var(--scrollbar-thumb-fg-color);
-        //box-shadow: inset 0 0 4px var(--scrollbar-thumb-fg-color);
     }
 }

@@ -1,4 +1,3 @@
-import { useContainerDimensions } from '../../hooks/useContainerDimensions'
 import ServerItem from '../ServerItem/ServerItem'
 import s from './ServerList.module.css'
 

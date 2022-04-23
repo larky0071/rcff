@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Button } from '../../UI/button/Button'
 import s from './ServerItem.module.css'
 
 interface ServerItemProps {
@@ -31,7 +30,7 @@ function ServerItem({ ms, server }: ServerItemProps) {
         <div className={s.ServerItem}>
             <div className={s.Content}>
                 <div className={s.LeftPanelWrapper}>
-                    <img className={s.Avatar} src="https://cdn.discordapp.com/attachments/915352648448897034/955865729138315305/57518400d12b7771.png"></img>
+                    <img className={s.Avatar} src="https://cdn.discordapp.com/attachments/915352648448897034/955865729138315305/57518400d12b7771.png" alt=''></img>
                     <div className={s.OnlineWrapper}>
                         <div className={s.Pulse}></div>
                         <p className={s.Counter}>7893</p>

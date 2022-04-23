@@ -1,4 +1,4 @@
-import { Box, Tabs, Tab, TextField, ThemeProvider, createTheme, Button } from '@mui/material'
+import { Box, Tab, TextField, ThemeProvider, createTheme, Button } from '@mui/material'
 import { TabContext, TabPanel, TabList } from '@mui/lab';
 import s from './Add.module.css'
 import { useState } from 'react';
@@ -14,9 +14,7 @@ function Add() {
     const changeSRVAbout = (e: any) => setSRVAbout(e.target.value)
 
     const validSRVID = () => {
-        if (SRVID == "") return true
-        if (SRVID.match(/[a-zA-ZА-Яа-я]/g)) return false
-        if (SRVID.length != 18) return false
+        if (SRVID !== "" || SRVID.match(/[a-zA-ZА-Яа-я]/g) || SRVID.length !== 18) return false
         return true
     }
 
