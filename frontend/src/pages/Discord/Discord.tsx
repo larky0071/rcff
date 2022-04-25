@@ -1,21 +1,31 @@
-import { getDiscordServerList, Guild } from '../../api/getDiscordServerList'
 import ServerList from '../../components/ServerList/ServerList'
-import ServerItem from '../../components/ServerItem/ServerItem'
 import Header from '../../components/Header/Header'
 import InfoPanel from '../../components/InfoPanel/InfoPanel'
 import s from './Discord.module.css'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import { Guild } from '../../types/Guild'
 
+//TODO: refactor
 function Discord() {
-  // Temporary data
-  // make download from server
-  let DiscordServerList: Guild[] = getDiscordServerList('')
+  const [guilds, setGuilds] = useState<Guild[]>([])
+
+  useEffect(() => {
+    if (guilds.length !== 0) return
+    axios({
+      'url': 'http://rcff.ru/api/list/accept',
+      'method': 'POST'
+    })
+      .then(res => {
+        console.log(res)
+        setGuilds(res.data)
+      })
+  })
 
   return <div className={s.Page}>
     <Header />
     <InfoPanel />
-    <ServerList data={DiscordServerList} cols={3}>
-      <ServerItem />
-    </ServerList>
+    <ServerList guilds={guilds} />
   </div >
 }
 
